@@ -34,14 +34,14 @@ export const deleteOrder = createAsyncThunk('orders/deleteOrder', async (orderId
 });
 
 // 4. Update an order
-export const updateOrder = createAsyncThunk('orders/updateOrder', async ({ id, data }, { rejectWithValue }) => {
-  try {
-    const response = await axios.put(`${Api}/orders/${id}`, data);
-    return response.data;
-  } catch (err) {
-    return rejectWithValue(err.response?.data || err.message);
-  }
-});
+// export const updateOrder = createAsyncThunk('orders/updateOrder', async ({ id, data }, { rejectWithValue }) => {
+//   try {
+//     const response = await axios.put(`${Api}/orders/${id}`, data);
+//     return response.data;
+//   } catch (err) {
+//     return rejectWithValue(err.response?.data || err.message);
+//   }
+// });
 
 const orderSlice = createSlice({
   name: 'orders',
