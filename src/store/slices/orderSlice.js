@@ -103,21 +103,21 @@ const orderSlice = createSlice({
       })
 
       // 👉 Update Order
-      .addCase(updateOrder.pending, (state) => {
-        state.loading = true;
-        state.error = null;
-      })
-      .addCase(updateOrder.fulfilled, (state, action) => {
-        state.loading = false;
-        const index = state.orders.findIndex(order => order.order_id === action.payload.order_id);
-        if (index !== -1) {
-          state.orders[index] = action.payload;
-        }
-      })
-      .addCase(updateOrder.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.payload;
-      });
+      // .addCase(updateOrder.pending, (state) => {
+      //   state.loading = true;
+      //   state.error = null;
+      // })
+      // .addCase(updateOrder.fulfilled, (state, action) => {
+      //   state.loading = false;
+      //   const index = state.orders.findIndex(order => order.order_id === action.payload.order_id);
+      //   if (index !== -1) {
+      //     state.orders[index] = action.payload;
+      //   }
+      // })
+      // .addCase(updateOrder.rejected, (state, action) => {
+      //   state.loading = false;
+      //   state.error = action.payload;
+      // });
   },
 });
 
